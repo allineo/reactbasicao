@@ -1,9 +1,9 @@
-function Header(props) {
+function Perfil(props) {
 
   const tituloPagina = <h1>Olá,<br />meu nome é<br />{props.meuNome}!</h1>;
   const minhaFoto = <img src={props.arquivoFoto} className="inline_img"></img>;
 
-  const header = (
+  const perfilContent = (
     <div>
       <div className="nome">
         {tituloPagina}
@@ -13,10 +13,10 @@ function Header(props) {
       </div>
     </div>);
 
-  return header;
+  return perfilContent;
 }
 
-function Body() {
+function Bio() {
   const minibio = <div className="minibio">
     Alline Oliveira, especialista em inovação,
     há 25 anos vem transformando comportamentos de usuários de tencologia em aplicativos
@@ -28,12 +28,21 @@ function Body() {
   return minibio;
 }
 
+function LinkLinKedin() {
+  return (
+    <div className="linkedin">
+      <a href='https://linkedin.com/in/allineo' target='_blank'>Linkedin</a>
+    </div>);
+}
+
 function Content() {
   return (
     <div>
-      <Header meuNome="Alline Oliveira" arquivoFoto='perfil.jpg' />
+      <Perfil meuNome="Alline Oliveira" arquivoFoto='perfil.jpg' />
       <br />
-      <Body />
+      <Bio />
+      <br /><br />
+      <LinkLinKedin />
     </div>);
 }
 
